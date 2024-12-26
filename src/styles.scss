@@ -1,0 +1,17 @@
+
+//Encapsulated styles under the bioz-if-banner-widget class.
+.bioz-if-banner-widget {
+  @import "node_modules/tooltipster/dist/css/tooltipster.bundle.min";
+  @import "node_modules/bootstrap/dist/css/bootstrap.min";
+  /* @import "node_modules/highcharts/css/highcharts"; */
+}
+
+/*  @import "node_modules/font-awesome/css/font-awesome.min"; */
+/*  @import "node_modules/jquery-ui-dist/jquery-ui.min"; */
+@import "node_modules/slick-carousel/slick/slick";
+@import "styles/tooltipster-theme2";
+@import "styles/jquery.simplePagination";
+@import "styles/keyboard";
+@import "styles/odometer-theme-default";
+@import "styles/ci_widget.css";
+@import "styles/ci_widget.sino.css";

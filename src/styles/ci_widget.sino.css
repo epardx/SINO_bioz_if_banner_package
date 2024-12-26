@@ -1,0 +1,39 @@
+/* ci_widget.sino.css */
+body {
+  background-color: transparent !important;
+}
+.bioz-w-container {
+  font-weight: inherit;
+}
+.bioz-w-link:hover {
+  color: #000000 !important
+}
+.bioz-w-add-underline:hover {
+  text-decoration: underline !important;
+  -webkit-text-decoration-line:  underline !important;
+}
+
+.bioz-w-t-link {
+  color: #428672
+}
+.ui-widget.ui-widget-content {
+  border-left: 5px solid #428672 !important;
+}
+.ui-dialog-titlebar-close {
+  border: none;
+  background: transparent
+}
+.ui-button:hover, .ui-button:active {
+  background: #428672;
+  color: white
+}
+.ui-slider .ui-slider-range {
+  background: #428672 !important;
+}
+.ui-slider .ui-slider-handle {
+  background: #428672 !important;
+}
+input.apple-switch:checked {
+  border-color: #428672;
+  box-shadow: inset 26px 0 0 0 #428672;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Bioz Packaged Content Hub Test</title>
+    <link rel="stylesheet" media="screen" href="https://cdn.bioz.com/assets/font-awesome-reg.css">
+    <link rel="stylesheet" media="screen" href="https://cdn.bioz.com/assets/jquery-ui-1.12.0.css">
+    <script src="bioz_sino_if_banner_widget.js"></script>
+    <script src="https://cdn.bioz.com/assets/modules/world.js"></script>
+    <script src="https://cdn.bioz.com/assets/modules/mapdata.js"></script>
+    <script src="https://cdn.bioz.com/assets/odometer.min.js"></script>
+</head>
+<body style="font-family: Roboto, Helvetica, Arial, sans-serif;cursor: auto;">
+<h1>Bioz <span id="vendor-name"></span> IF Banner Test</h1>
+<div id="bioz-if-banner-widget" class="bioz-if-banner-widget" style="padding: 10px"></div>
+<br/>
+<br/>
+<script>
+    var _form_mobile = false;
+    var _locale = "en";
+    var param_locale = getUrlVars()["lang"];
+    if (param_locale && param_locale.length > 0) {
+        _locale = param_locale;
+    }
+    var _be_url = "https://www.bioz.com/request_badge_data.json/";
+    var _vendor_id = "1065";
+    var _vendor_partner_color = "#428672";
+    var _vendor_name = "Sino Biological";
+    var params_route = getUrlVars()["cr"];
+    if (params_route && params_route == "1") {
+        _be_url = "https://badges-api-china.bioz.com/search_badges/";
+    }
+    var v_widget_noiframe_obj = null;
+    var _start_time = new Date();
+    var _badge_div = "<div class=\"bioz-w-container\" style=\"\">\n" +
+            "        <div id=\"w-" + _vendor_id + "-qx\"></div>\n" +
+            "        <div id=\"bioz-w-pb-" + _vendor_id + "-qx-div\" style=\"display:none\">\n" +
+            "            <a id=\"bioz-w-pb-" + _vendor_id + "-qx\" style=\"font-size: 12px;text-decoration:none;color:" + _vendor_partner_color + "\" href=\"https://www.bioz.com/\" target=\"_blank\"><img src=\"https://cdn.bioz.com/assets/favicon.png\" style=\"width:11px;height:11px;vertical-align: baseline;padding-bottom:0px;margin-left:0px;margin-bottom:0px;float:none\" alt=\"powered by bioz\"> Powered by Bioz</a>\n" +
+            "            <a class=\"bioz-w-link\" style=\"font-size: 12px;color:transparent;float:right\" href=\"https://www.bioz.com/result//product/" + _vendor_name + "/?cn=\" target=\"_blank\"> See more details on Bioz</a>\n" +
+            "        </div>\n" +
+            "    </div>";
+
+    document.addEventListener('DOMContentLoaded', init);
+
+    function init() {
+        document.getElementById("bioz-if-banner-widget").innerHTML = _badge_div;
+        document.getElementById("vendor-name").innerHTML = _vendor_name;
+        v_widget_noiframe_obj = new Bioz_sino_if_banner_Widget.v_widget_noiframe_obj();
+        v_widget_noiframe_obj.renderWidget();
+        window.addEventListener('beforeunload', ()=>{
+            measure_duration();
+        });
+    }
+    function measure_duration() {
+        if (typeof (_v_widget) != 'undefined') {
+            console.log("**** performing visibility measurement ****");
+            v_widget_noiframe_obj.endVisibleTime(_start_time);
+        } else {
+            console.log("**** failed visibility measurement event ****");
+        }
+    }
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&#]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+</script>
+</body>
+</html>

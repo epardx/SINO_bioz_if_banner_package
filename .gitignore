@@ -1,0 +1,17 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### Generated assets folder ###
+dist/
+
+### NodeJS ###
+node_modules
+package-lock.json
+
+.DS_Store
