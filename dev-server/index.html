@@ -31,14 +31,14 @@
         _be_url = "https://badges-api-china.bioz.com/search_badges/";
     }
     var v_widget_noiframe_obj = null;
+    var ci_widget_noiframe_obj = null;
     var _start_time = new Date();
-    var _badge_div = "<div class=\"bioz-w-container\" style=\"\">\n" +
-            "        <div id=\"w-" + _vendor_id + "-qz\"></div>\n" +
-            "        <div id=\"bioz-w-pb-" + _vendor_id + "-qz-div\" style=\"display:none\">\n" +
-            "            <a id=\"bioz-w-pb-" + _vendor_id + "-qz\" style=\"font-size: 12px;text-decoration:none;color:" + _vendor_partner_color + "\" href=\"https://www.bioz.com/\" target=\"_blank\"><img src=\"https://cdn.bioz.com/assets/favicon.png\" style=\"width:11px;height:11px;vertical-align: baseline;padding-bottom:0px;margin-left:0px;margin-bottom:0px;float:none\" alt=\"powered by bioz\"> Powered by Bioz</a>\n" +
-            "            <a class=\"bioz-w-link\" style=\"font-size: 12px;color:transparent;float:right\" href=\"https://www.bioz.com/result//product/" + _vendor_name + "/?cn=\" target=\"_blank\"> See more details on Bioz</a>\n" +
-            "        </div>\n" +
-            "    </div>";
+    var _badge_div = "<div class=\"bioz-w-container\" style=\"position:relative\">" +
+            "   <div id=\"w-" + _vendor_id + "-qz\"></div>" +
+            "   <div style=\"height:10px\"></div>" +
+            "   <div id=\"w-1065-ci\"></div>" +
+            "   <div id=\"bioz-w-bottom-logo\" style=\"position: absolute;right: 0;width:70px\"></div>" +
+            "</div>";
 
     document.addEventListener('DOMContentLoaded', init);
 
@@ -47,6 +47,8 @@
         document.getElementById("vendor-name").innerHTML = _vendor_name;
         v_widget_noiframe_obj = new Bioz_sino_if_banner_Widget.v_widget_noiframe_obj();
         v_widget_noiframe_obj.request_widget_data_internal();
+        ci_widget_noiframe_obj = new Bioz_sino_if_banner_Widget.ci_widget_noiframe_obj();
+        ci_widget_noiframe_obj.request_widget_data();
         window.addEventListener('beforeunload', ()=>{
             measure_duration();
         });
