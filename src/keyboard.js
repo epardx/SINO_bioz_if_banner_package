@@ -40,9 +40,9 @@ var VKI_attach, VKI_close;
     this.VKI_activeTab = 0;  // Tab moves to next: 1 = element, 2 = keyboard enabled element
     this.VKI_enterSubmit = true;  // Submit forms when Enter is pressed
     this.VKI_keyCenter = 3;
-	this.VKI_clearInput = false; // add clear button to title
-	this.VKI_languageSelect = false; // show language selector
-	this.VKI_closeBox = false; // add close box to title
+    this.VKI_clearInput = false; // add clear button to title
+    this.VKI_languageSelect = false; // show language selector
+    this.VKI_closeBox = false; // add close box to title
 
     this.VKI_isIE = /*@cc_on!@*/false;
     this.VKI_isIE6 = /*@if(@_jscript_version == 5.6)!@end@*/false;
@@ -157,14 +157,14 @@ var VKI_attach, VKI_close;
             [[" ", " ", " ", " "], ["AltGr", "AltGr"]]
         ], 'lang': ["el"] };
 
-	this.VKI_layout['Greek Pad'] = {
-		'name': "Greek", 'keys': [
-			[["\u03c2", "^"], ["\u03b5", "\u0395"], ["\u03c1", "\u03a1"], ["\u03c4", "\u03a4"], ["\u03c5", "\u03a5"], ["\u03b8", "\u0398"], ["\u03b9", "\u0399"], ["\u03bf", "\u039f"], ["\u03c0", "\u03a0"]],
-			[["\u03b1", "\u0391"], ["\u03c3", "\u03a3"], ["\u03b4", "\u0394"], ["\u03c6", "\u03a6"], ["\u03b3", "\u0393"], ["\u03b7", "\u0397"], ["\u03be", "\u039e"], ["\u03ba", "\u039a"], ["\u03bb", "\u039b"]],
-			[[" \u21e7 ", "Shift"], ["\u03b6", "\u0396"], ["\u03c7", "\u03a7"], ["\u03c8", "\u03a8"], ["\u03c9", "\u03a9"], ["\u03b2", "\u0392"], ["\u03bd", "\u039d"], ["\u03bc", "\u039c"]]
-		], 'lang': ["el"] };
+    this.VKI_layout['Greek Pad'] = {
+        'name': "Greek", 'keys': [
+            [["\u03c2", "^"], ["\u03b5", "\u0395"], ["\u03c1", "\u03a1"], ["\u03c4", "\u03a4"], ["\u03c5", "\u03a5"], ["\u03b8", "\u0398"], ["\u03b9", "\u0399"], ["\u03bf", "\u039f"], ["\u03c0", "\u03a0"]],
+            [["\u03b1", "\u0391"], ["\u03c3", "\u03a3"], ["\u03b4", "\u0394"], ["\u03c6", "\u03a6"], ["\u03b3", "\u0393"], ["\u03b7", "\u0397"], ["\u03be", "\u039e"], ["\u03ba", "\u039a"], ["\u03bb", "\u039b"]],
+            [[" \u21e7 ", "Shift"], ["\u03b6", "\u0396"], ["\u03c7", "\u03a7"], ["\u03c8", "\u03a8"], ["\u03c9", "\u03a9"], ["\u03b2", "\u0392"], ["\u03bd", "\u039d"], ["\u03bc", "\u039c"]]
+        ], 'lang': ["el"] };
 
-	this.VKI_layout['Espa\u00f1ol'] = {
+    this.VKI_layout['Espa\u00f1ol'] = {
         'name': "Spanish", 'keys': [
             [["\u00ba", "\u00aa", "\\"], ["1", "!", "|"], ["2", '"', "@"], ["3", "'", "#"], ["4", "$", "~"], ["5", "%", "\u20ac"], ["6", "&", "\u00ac"], ["7", "/"], ["8", "("], ["9", ")"], ["0", "="], ["'", "?"], ["\u00a1", "\u00bf"], ["Bksp", "Bksp"]],
             [["Tab", "Tab"], ["q", "Q"], ["w", "W"], ["e", "E"], ["r", "R"], ["t", "T"], ["y", "Y"], ["u", "U"], ["i", "I"], ["o", "O"], ["p", "P"], ["`", "^", "["], ["+", "*", "]"], ["\u00e7", "\u00c7", "}"]],
@@ -499,7 +499,7 @@ var VKI_attach, VKI_close;
             keybut.className = "keyboardInputLink";
             keybut.title = self.VKI_i18n['01'];
             keybut.elem = elem;
-            keybut.innerHTML = "<i class=\"fa fa-keyboard-o\" style=\"font-size:18px; color: #555\"></i>";
+            keybut.innerHTML = "<i class=\"fa fa-keyboard-o\" style=\"font-size:1.8em; color: #555\"></i>";
             keybut.onclick = function(e) {
                 e = e || event;
                 if (e.stopPropagation) { e.stopPropagation(); } else e.cancelBubble = true;
@@ -712,28 +712,28 @@ var VKI_attach, VKI_close;
         th.appendChild(big);
     }
 
-	if (this.VKI_clearInput) {
-		var span = document.createElement('span');
-		span.appendChild(document.createTextNode(this.VKI_i18n['07']));
-		span.title = this.VKI_i18n['08'];
-		VKI_addListener(span, 'click', function () {
-			self.VKI_target.value = "";
-			self.VKI_target.focus();
-			return false;
-		}, false);
-		VKI_mouseEvents(span);
-		th.appendChild(span);
-	}
-	if (this.VKI_closeBox) {
-		var strong = document.createElement('strong');
-		strong.appendChild(document.createTextNode('X'));
-		strong.title = this.VKI_i18n['06'];
-		VKI_addListener(strong, 'click', function () {
-			self.VKI_close();
-		}, false);
-		VKI_mouseEvents(strong);
-		th.appendChild(strong);
-	}
+    if (this.VKI_clearInput) {
+        var span = document.createElement('span');
+        span.appendChild(document.createTextNode(this.VKI_i18n['07']));
+        span.title = this.VKI_i18n['08'];
+        VKI_addListener(span, 'click', function () {
+            self.VKI_target.value = "";
+            self.VKI_target.focus();
+            return false;
+        }, false);
+        VKI_mouseEvents(span);
+        th.appendChild(span);
+    }
+    if (this.VKI_closeBox) {
+        var strong = document.createElement('strong');
+        strong.appendChild(document.createTextNode('X'));
+        strong.title = this.VKI_i18n['06'];
+        VKI_addListener(strong, 'click', function () {
+            self.VKI_close();
+        }, false);
+        VKI_mouseEvents(strong);
+        th.appendChild(strong);
+    }
     tr.appendChild(th);
     thead.appendChild(tr);
     this.VKI_keyboard.appendChild(thead);
@@ -873,8 +873,8 @@ var VKI_attach, VKI_close;
                 switch (lkey[1]) {
                     case "Caps": case "Shift":
                     case "Alt": case "AltGr": case "AltLk":
-                    VKI_addListener(td, 'click', (function(type) { return function() { self.VKI_modify(type); return false; }})(lkey[1]), false);
-                    break;
+                        VKI_addListener(td, 'click', (function(type) { return function() { self.VKI_modify(type); return false; }})(lkey[1]), false);
+                        break;
                     case "Tab":
                         VKI_addListener(td, 'click', function() {
                             if (self.VKI_activeTab) {
@@ -1135,12 +1135,12 @@ var VKI_attach, VKI_close;
                 }
                 let extraTop = 3;
                 if (_form_mobile){
-                  extraTop = 8;
+                    extraTop = 8;
                 }
                 self.VKI_keyboard.style.top = iPos[1] - ((self.VKI_target.keyboardPosition == "fixed" && !self.VKI_isIE && !self.VKI_isMoz) ? sDis[1] : 0) + fudge + extraTop + "px";
 //              self.VKI_keyboard.style.left = Math.max(10, Math.min(wDim[0] - self.VKI_keyboard.offsetWidth - 25, iPos[0])) + "px";
                 var leftPos  = self.VKI_target.getBoundingClientRect().left + $(window)['scrollLeft']();
-                self.VKI_keyboard.style.left = Math.max(10, leftPos + self.VKI_target.offsetWidth) - 156 + "px";
+                self.VKI_keyboard.style.left = Math.max(10, leftPos + self.VKI_target.offsetWidth) - 236 + "px";
                 if (self.VKI_isIE6) {
                     self.VKI_iframe.style.width = self.VKI_keyboard.offsetWidth + "px";
                     self.VKI_iframe.style.height = self.VKI_keyboard.offsetHeight + "px";

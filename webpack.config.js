@@ -4,8 +4,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const sourceMap = true;
 
 module.exports = {
-    stats: {warnings:false},
-    mode: "development",
+    stats: "none",
+    mode: "production",
     devtool: sourceMap ? "source-map" : false,
     entry: {
         'bioz_sino_if_banner_widget': path.resolve(__dirname, "./src/index")
@@ -112,5 +112,11 @@ module.exports = {
             directory: path.join(__dirname, 'dev-server'),
         },
         port: 8080,
+        client: {
+            overlay: {
+                errors: true,
+                warnings: false
+            }
+        }
     },
 };
