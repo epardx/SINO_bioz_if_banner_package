@@ -1421,8 +1421,8 @@ function ci_widget_noiframe_obj() {
 		var date_str = today.toISOString().slice(0, 10);
 		var hour_str = today.toISOString().slice(11, 13);
 		var date_str_array = date_str.split("-");
-		var sliced_auth_key = _key.slice(0, 3) + hour_str + _key.slice(5, 8) + date_str_array[2] + _key.slice(10, 13) +
-			date_str_array[0].slice(2, 4) + _key.slice(15, 18) + date_str_array[1];
+		var sliced_auth_key = self.config.key.slice(0, 3) + hour_str + self.config.key.slice(5, 8) + date_str_array[2] + self.config.key.slice(10, 13) +
+			date_str_array[0].slice(2, 4) + self.config.key.slice(15, 18) + date_str_array[1];
 		return sliced_auth_key;
 	}
 
