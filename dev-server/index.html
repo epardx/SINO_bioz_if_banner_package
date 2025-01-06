@@ -6,13 +6,10 @@
     <link rel="stylesheet" media="screen" href="https://cdn.bioz.com/assets/font-awesome-reg.css">
     <link rel="stylesheet" media="screen" href="https://cdn.bioz.com/assets/jquery-ui-1.12.0.css">
     <script src="bioz_sino_if_banner_widget.js"></script>
-    <script src="https://cdn.bioz.com/assets/modules/world.js"></script>
-    <script src="https://cdn.bioz.com/assets/modules/mapdata.js"></script>
-    <script src="https://cdn.bioz.com/assets/odometer.min.js"></script>
 </head>
 <body style="font-family: Roboto, Helvetica, Arial, sans-serif;cursor: auto;margin:0">
 <h1>Bioz <span id="vendor-name"></span> IF Banner Test</h1>
-<div id="bioz-if-banner-widget" class="bioz-if-banner-widget" style="padding: 10px"></div>
+<div id="bioz-if-banner-widget" class="bioz-if-banner-widget"></div>
 <br/>
 <br/>
 <script>
@@ -22,14 +19,9 @@
     if (param_locale && param_locale.length > 0) {
         _locale = param_locale;
     }
-    var _be_url = "https://www.bioz.com/request_badge_data.json/";
     var _vendor_id = "1065";
     var _vendor_partner_color = "#428672";
     var _vendor_name = "Sino Biological";
-    var params_route = getUrlVars()["cr"];
-    if (params_route && params_route == "1") {
-        _be_url = "https://badges-api-china.bioz.com/search_badges/";
-    }
     var v_widget_noiframe_obj = null;
     var ci_widget_noiframe_obj = null;
     var _start_time = new Date();
