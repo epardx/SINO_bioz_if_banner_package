@@ -172,7 +172,7 @@ function v_widget_noiframe_obj() {
 			"<div class='row' style='margin-top:200px'>";
 		for (var i = 0; i < records.top_impact_factor_publications.length; i++) {
 
-			widget_html += "<div class='col-lg-2 col-md-3 col-4'>" + w_create_article_link(records.top_impact_factor_publications[i]) + "</div>";
+			widget_html += "<div class='col-lg-2 col-md-3  col-xs-4 col-4'>" + w_create_article_link(records.top_impact_factor_publications[i]) + "</div>";
 		}
 		widget_html += "</div>" +
 			"</div>";
@@ -207,7 +207,7 @@ function v_widget_noiframe_obj() {
 				setTimeout(function() {
 					var url_suffix= article_url.substring(article_url.lastIndexOf("/") + 1, article_url.length);
 					if (!url_suffix.toLowerCase().startsWith("us")) {
-						title_span.append("<div style='float: right'><a style='color:" + _config.vendor_partner_color + "' href='" + article_url.replace("showDocsx", "showDocs") + "' target='_blank'>" + self.lang.i18l("read_article_on_bioz") + " <img style='width:10px;height:10px;vertical-align: baseline' src='/assets/external-link.svg'/></a></div>");
+						title_span.append("<div style='float: right'><a style='color:" + _config.vendor_partner_color + "' href='" + article_url.replace("showDocsx", "showDocs") + "' target='_blank'>" + self.lang.i18l("read_article_on_bioz") + " <img style='width:10px;height:10px;vertical-align: baseline' src='https://cdn.bioz.com/assets/external-link.svg'/></a></div>");
 					}
 					jQuery('.ui-dialog-content').css('overflow', 'hidden');
 				}, 300);
@@ -369,10 +369,10 @@ function ci_widget_noiframe_obj() {
 	function w_create_read_article_link(paper_id, pmc_id, pm_id, article_title) {
 		if (pmc_id.length > 0) {
 			return "<a class='bioz-w-add-underline bioz-w-link bioz-w-article-title' style='color:#666' hrefx='https://www.bioz.com/articles/showDocs/?q=" +
-				paper_id + "&uq=" + self.config.query + "&v=PMC" + pmc_id + "'" + 'rel="nofollow"' + "><img style='width:10px;height:10px;vertical-align: baseline' src='/assets/external-link.svg' />&nbsp;" + article_title + "</a>";
+				paper_id + "&uq=" + self.config.query + "&v=PMC" + pmc_id + "'" + 'rel="nofollow"' + "><img style='width:10px;height:10px;vertical-align: baseline' src='https://cdn.bioz.com/assets/external-link.svg' />&nbsp;" + article_title + "</a>";
 		} else {
 			return "<a class='bioz-w-add-underline bioz-w-link bioz-w-article-title' style='color:#666' hrefx='https://www.bioz.com/articles/showDocs/?q=" +
-				paper_id + "&uq=" + self.config.query + "&v=" + pm_id + "'" + 'rel="nofollow"' + "><img style='width:10px;height:10px;vertical-align: baseline' src='/assets/external-link.svg' />&nbsp;" + article_title + "</a>";
+				paper_id + "&uq=" + self.config.query + "&v=" + pm_id + "'" + 'rel="nofollow"' + "><img style='width:10px;height:10px;vertical-align: baseline' src='https://cdn.bioz.com/assets/external-link.svg' />&nbsp;" + article_title + "</a>";
 		}
 	}
 	function w_create_article_pub_link(paper_id, pmc_id, pm_id) {

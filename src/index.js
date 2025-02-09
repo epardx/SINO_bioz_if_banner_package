@@ -1,5 +1,4 @@
 import './styles.scss';
-import 'bootstrap/dist/js/bootstrap.min';
 import 'jquery-ui-dist/jquery-ui.js'; // add full library for now ...
 
 import {bioz_w_attach_message} from "./bioz-w-api.min.js";
