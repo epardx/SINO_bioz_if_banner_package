@@ -140,27 +140,27 @@ function v_widget_noiframe_obj() {
 		widget_html += "<div id='t-" + self.main_id + "' style='margin:0 " + (self.widthContainer <= 750 ? "20px" : "0") + " 20px " + (self.widthContainer <= 750 ? "20px" : "0") + ";min-height:" + (home_page_background ? "340px" : "180px") + "font-size:" + (self.widthContainer <=750 ? "20px" : "14px") + ";position:relative'>" +
 			(home_page_background ? "<div style='position:absolute;top:0;left:0;width:100%;height:320px'>" + _home_banner_svg + "</div>" : "") +
 			"<div style='position:relative;top:50px;display: flex;background: transparent;white-space: nowrap;justify-content: space-evenly;color:" + _config.vendor_partner_color + ";font-weight: bold;padding-top:8px'>" +
-			"	<div style='text-align: center'>" +
+			"	<div style='text-align: center;width:90px'>" +
 			"		<div style='display:block;font-size: 2.8em'>" + count_plus + "</div>" +
 			"		<div style='display:block;font-size: 1.1em;font-weight:500;color:#666'>" + self.lang.i18l("scientific_citations") + "</div>" +
 			"	</div>" +
 			"	<div style='text-align: center'>" +
 			"		<div style='display:block;border-left: 3px solid #eee;height: 72px;margin-top:4px'></div>" +
 			"	</div>" +
-			"	<div style='text-align: center'>" +
+			"	<div style='text-align: center;width:90px'>" +
 			"		<div style='display:block;font-size: 2.8em'>" + cns_count + "</div>" +
 			"		<div style='display:block;font-size: 1.1em;font-weight:500;color:#666'>" + self.lang.i18l("cns_papers") + "</div>" +
 			"	</div>" +
 			"	<div style='text-align: center'>" +
 			"		<div style='display:block;border-left: 3px solid #eee;height: 72px;margin-top:4px'></div>" +
 			"	</div>" +
-			"	<div style='text-align: center'>" +
+			"	<div style='text-align: center;width:90px'>" +
 			"		<div style='display:block;font-size: 2.8em'>7</div>" +
 			"		<div style='display:block;font-size: 1.1em;font-weight:500;color:#666'>" + self.lang.i18l("continents") + "</div>" +
 			"	</div>" +
 			"</div>" +
-			"<div style='position:absolute;top:200px;left:calc(50% - " + (self.lang.locale == "en" ? "210px" : "160px") + ");font-size:1.8em;font-weight:bold;background-color: white'>" + self.lang.i18l("we_are_cited_in_top_journals") + "</div>" +
-			"<div style='position:absolute;top:240px;left:calc(50% - " + (self.lang.locale == "en" ? "90px" : "50px") + ");font-size:1.4em;font-weight:500;background-color: white'>" + self.lang.i18l("impact_factor_greater_than") + "</div>" +
+			"<div style='position:absolute;top:200px;text-align: center;width:100%;font-size:1.8em;font-weight:bold;background-color: white'>" + self.lang.i18l("we_are_cited_in_top_journals") + "</div>" +
+			"<div style='position:absolute;top:240px;text-align: center;width:100%;font-size:1.4em;font-weight:500;background-color: white'>" + self.lang.i18l("impact_factor_greater_than") + "</div>" +
 			"<div style='display: none;width:100%;position:absolute;bottom:8px'>" +
 			"	<div style='width:70%'><div style='max-width: 500px'>" +
 			"		<figure class='highcharts-figure'>" +
